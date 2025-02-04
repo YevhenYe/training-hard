@@ -41,11 +41,15 @@ margin: 0 auto;}
 /* header */
 
 /* logo */
-.container-header{display: flex;}
+.container-header{display: flex;
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Равномерно распределяет логотип, навигацию и контакты */
+  width: 100%;}
 
-
-
-.page-header{outline: 2px solid black}
+.box-nav{padding-bottom: 25px;
+padding-top: 24px;} 
 
 .logo{color:var(--accent-color);
 text-decoration: none;
@@ -59,15 +63,19 @@ font-family: "Raleway", sans-serif;}
 .nav{
 font-weight: 500;
 font-size: 14px;
-letter-spacing: 0.02em;}
+letter-spacing: 0.02em;
+}
 
 .item-nav {
 display: block;}
 
-.site-nav{display: flex;}
+.site-nav{display: flex;
+  gap: 50px;
+}
 
 .site-nav .link {color:var(--title-text-color);
-text-decoration: none;}
+text-decoration: none;
+padding-bottom: 32px;}
 
 .site-nav .link:hover,
 .site-nav .link:focus{color:var(--accent-color)}
@@ -82,12 +90,14 @@ text-decoration: none;}
 text-decoration: none;
 font-weight: 500;
 font-size: 14px;
-letter-spacing: 0.02em;}
+letter-spacing: 0.02em;
+padding-bottom: 32px;}
 
 .item-contacts{display: block;}
 
 
 .box-contacts > .site-contacts{display: flex;
+  gap: 50px;
 }
 
 .site-contacts .contacts:hover,
@@ -96,10 +106,15 @@ letter-spacing: 0.02em;}
 
 /* section hero */
 .hero{background: #2f303a;
-width: 1600px;
+min-width: 1600px;
 height: 600px;
-text-align: center;
-margin: 0 auto;}
+display: flex;
+  flex-direction: column;
+    align-items: center;
+    /* Центрирует содержимое по горизонтали */
+    justify-content: center;
+    /* Центрирует по вертикали */
+    text-align: center;}
 
 .hero-title{color:#ffffff;
 font-weight: 900;
@@ -108,11 +123,7 @@ line-height: 1.36;
 letter-spacing: 0.06em;
 text-transform: uppercase;
 text-align: center;
-margin-top: 17px;
-max-width: 696px;
-margin-left: auto;
-margin-right: auto;
-padding-top: 200px;}
+max-width: 696px;}
 
 .hero-btn{background-color: var(--accent-color);
 color:#ffffff;
@@ -125,13 +136,12 @@ border-radius: 4px;
 min-width: 216px;
 height: 50px; 
 padding: 10px 32px;
-text-align: center;
 margin-top: 30px;}
 
 /* section advandage */
 
-.visibility{outline: 2px solid red;
-margin-top: 94px;
+.visibility{
+/* margin-top: 94px; */
 visibility: hidden;}
 
 
@@ -141,7 +151,9 @@ padding-top: 0px;}
 .item-advandage {
 display: block;}
 
-.section{outline: 2px solid tomato;}
+.section{
+padding-top: 94px;
+  padding-bottom: 94px;}
 
 .list .title{color: var(--title-text-color);
 font-size: 14px;
@@ -150,6 +162,8 @@ text-transform: uppercase;}
 .section .text{
 font-size: 14px;
 line-height: 1.71;}
+
+.text-advandage{padding-top: 10px;}
 
 /* section our works */
 
@@ -160,7 +174,8 @@ color: var(--title-text-color);
 margin-top: 94px; 
 padding-bottom: 50px;}
 
-.list-work{display: flex;}
+.list-work{display: flex;
+gap: 30px;}
 
 .list-work.item-work{display: block;}
 
@@ -170,17 +185,24 @@ padding-bottom: 50px;}
 font-size: 36px;
 text-align: center;
 color: var(--title-text-color);
-margin-top: 94px;padding-top: 94px;
+margin-top: 94px;
 padding-bottom: 50px;}
 
 .title.name{
 font-weight: 500;
-font-size: 16px;}
+font-size: 16px;
+padding-top: 30px;
+text-align: center;}
+
 .text.proffesion{
-font-size: 16px;}
+font-size: 16px;
+padding-top: 10px;
+padding-bottom: 30px;
+text-align: center;}
 
 .list-team{padding-bottom: 86px;
-display: flex;}
+display: flex;
+gap: 30px;}
 
 .item-team{display: block;}
 
@@ -191,13 +213,21 @@ display: flex;}
 padding-bottom: 20px;
 margin-top: 8px;}
 
-.address{background-color:black;}
+.address{background-color:black;
+display: flex;}
 
+.address .site-contacts{display: flex;
+  flex-direction: column;
+  /* Размещает элементы вертикально */
+  gap: 9px;
+  }
 .address .contacts-footer{
 font-style: normal;
 font-size: 14px;
 line-height: 1.71;
-color: rgba(255, 255, 255, 0.6);}
+color: rgba(255, 255, 255, 0.6);
+}
+
 
 .city{color: #FFFFFF;}
 
@@ -207,7 +237,8 @@ color: rgba(255, 255, 255, 0.6);}
 .town{font-style: normal;
 font-size: 14px;
 line-height: 1.71;
-color: #fff;}
+color: #fff;
+}
 
 
 /* PORTFOLIO */
